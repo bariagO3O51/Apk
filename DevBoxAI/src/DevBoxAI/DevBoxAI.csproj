@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Resources\devboxai.ico</ApplicationIcon>
+    <AssemblyName>DevBoxAI</AssemblyName>
+    <RootNamespace>DevBoxAI</RootNamespace>
+    <Version>1.0.0</Version>
+    <Authors>DevBoxAI Team</Authors>
+    <Product>DevBoxAI</Product>
+    <Description>Windows Desktop App für Android-Apps aus Chat-Eingaben</Description>
+    <Copyright>Copyright © 2025</Copyright>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    <PackageReference Include="MaterialDesignColors" Version="2.1.4" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="AvalonEdit" Version="6.3.0" />
+    <PackageReference Include="WebView2" Version="1.0.2210.55" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevBoxAI.Core\DevBoxAI.Core.csproj" />
+    <ProjectReference Include="..\DevBoxAI.AI\DevBoxAI.AI.csproj" />
+    <ProjectReference Include="..\DevBoxAI.AndroidGenerator\DevBoxAI.AndroidGenerator.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
