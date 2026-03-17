@@ -1,1 +1,0 @@
-This is the full Android Studio project for Teams Part Finder.
